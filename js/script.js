@@ -1,34 +1,43 @@
-"use strict";
+/* Задание на урок:
 
-let number = 5;
-const leftBorderWidth = 1;
+1) Автоматизировать вопросы пользователю про фильмы при помощи цикла
 
-number = 10;
-console.log(number);
+2) Сделать так, чтобы пользователь не мог оставить ответ в виде пустой строки,
+отменить ответ или ввести название фильма длинее, чем 50 символов. Если это происходит - 
+возвращаем пользователя к вопросам опять
 
-const obj = {
-    a: 50,
+3) При помощи условий проверить  personalMovieDB.count, и если он меньше 10 - вывести сообщение
+"Просмотрено довольно мало фильмов", если от 10 до 30 - "Вы классический зритель", а если больше - 
+"Вы киноман". А если не подошло ни к одному варианту - "Произошла ошибка"
 
+4) Потренироваться и переписать цикл еще двумя способами*/
+
+'use strict';
+
+const numberOfFilms = +prompt('Сколько фильмов вы уже посмотрели?', '');
+
+const personalMovieDB = {
+    count: numberOfFilms,
+    movies: {},
+    actors: {},
+    genres: [],
+    privat: false
 };
-obj.a = 10;
-console.log(obj);
 
 
-// console.log(name);
-// var name = 'Ivan';  не использовать!!
+for (let i = 0; i < 2; i++) {
+    const a = prompt('Один из последних просмотренных фильмов?', ''),
+        b = prompt('На сколько оцените его?', '');
 
-//data
-//response связь с сервером
-
-// snake_case
-// UPPER_SNAKE_CASE
-// Kebab-case
-// PascaleCase
-
-let COLOR_RED = "#F00";
-
-const _apiBase = "https://api.example.com";
-//ЗДЕСЬ БУДЕТ ВАЩ КЛЮЧ, ЭТОТ КЛЮЧ МОЖЕТ НЕ РАБОТАТЬ(ЭТО ВСЁ ПРИМЕР)
-const _apiKey = "1234567890abcdef";
+    if (a != null && b != null && a != '' && b != '' && a.length < 50) {
+        personalMovieDB.movies[a] = b;
+        console.log('done');
+    } else {
+        console.log('error');
+        i--;
+    }
 
 
+}
+
+console.log(personalMovieDB);

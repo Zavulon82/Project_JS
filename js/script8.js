@@ -33,3 +33,9 @@ for (let i = 1; i < 8; i++) {
     }
     console.log(i);
 }
+
+let num3 = 16;
+
+while (nim3 < 16) {
+
+}

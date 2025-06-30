@@ -70,3 +70,12 @@ first: for (let i = 0; i < 3; i++) {
 // Second level: ${ i }
 // Third level: ${ k }
 // Third level: ${ k }
+
+
+for (let i = 2; i <= 16; i++) {
+    if (i % 3 === 0) {
+        continue;
+    } else {
+        console.log(i);
+    }
+}
