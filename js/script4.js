@@ -2,11 +2,11 @@
 
 // const category = 'toys';
 
-// console.log(`https://someurl.com/${category}/5`);
+// console.log(`https://someurl.com/${category}/5`); интерполяция строк и варианты добовления переменных в строки
 
 // const user = "Ivan";
 
-// alert(`Hello, ${user}`); урок №13
+// alert(`Hello, ${user}`); урок №13 пример вывода переменной в строку через интерполяцию при выводе в alert
 
 console.log("arr" + " - object");
 console.log(4 + " - object");
