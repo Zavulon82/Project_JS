@@ -8,7 +8,7 @@
 
 // alert(`Hello, ${user}`); урок №13 пример вывода переменной в строку через интерполяцию при выводе в alert
 
-console.log("arr" + " - object");
+console.log("arr" + " - object");// конкатенация строк
 console.log(4 + " - object");
 
 let incr = 10,
