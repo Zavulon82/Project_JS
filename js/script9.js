@@ -9,8 +9,8 @@ for (let i = 0; i < 3; i++) { //вложенный цикл
         console.log(j);
     }
 }
-// 0 -i
-// 0 -j
+// 0 -i вначале выполтяется внешний цикл(один раз), затем внутренний цикл(полностью)
+// 0 -j // потом всё заново до окончания внешнего цикла
 // 1 -j
 // 2 -j
 // 1 -i
@@ -48,12 +48,12 @@ console.log(result);
 // Пример вложенных циклов с условием continue и меткой(укозанием в каком из циклов применить continue )
 // для этого перед циклом прописываем слово "first:"(можно любое другое имя метки) и после этого в условии continue указываем эту метку
 first: for (let i = 0; i < 3; i++) {
-    console.log('First level: ${i}');
+    console.log(`First level: ${i}`);
     for (let j = 0; j < 3; j++) {
-        console.log('Second level: ${i}');
+        console.log(`Second level: ${j}`);
         for (let k = 0; k < 3; k++) {
             if (k === 2) continue first; // Пропускаем итерацию, если k равно 2
-            console.log('Third level: ${k}');
+            console.log(`Third level: ${k}`);
         }
     }
 }
