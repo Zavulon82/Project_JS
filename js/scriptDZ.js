@@ -69,3 +69,5 @@ function getMathResult(num, times) {
 }
 
 getMathResult(10, 5);
+
+console.log(getMathResult(10, 5)); // "10---20---30---40---50"

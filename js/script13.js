@@ -32,7 +32,14 @@ const logg = "Hello world";
 
 console.log(logg.substr(6, 5));// метод substr() работает аналогично методу slice(), но принимает начальный индекс и количество символов
 // вернет часть строки с 6.index и 5 символов = 'world' но устарел!!!
+const strict = "hello world";
+
+console.log(strict.substr(6, 5));
 
 
+const num = 12.2;
+console.log(Math.round(num)); // метод Math.round() округляет число до ближайшего целого = 12
 
-
+const test = "12.2px";
+console.log(parseInt(test)); // метод parseInt() преобразует строку в целое число
+console.log(parseFloat(test)); // метод parseFloat() преобразует строку в число с плавающей точкой = 12.2
